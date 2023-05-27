@@ -1,31 +1,31 @@
 <template>
-     <v-card
-      class="task mt-1"
-      v-for="task in tasks"
-      :key="task.id"
-     >
-      <v-card-subtitle
-        class="task__subtitle"
-        color="red"
-      >
-        {{ task.project }}
-      </v-card-subtitle>
+  <v-card
+    class="task mt-1"
+  >
+    <v-card-subtitle
+      class="task__subtitle"
+    >
+      {{ task.project }}
+    </v-card-subtitle>
 
-       <v-card-title
-        class="task__title"
-       >
-        {{ task.title }}
-       </v-card-title>
-    </v-card>
+    <v-card-title
+      class="task__title"
+    >
+      {{ task.title }}
+    </v-card-title>
+  </v-card>
 </template>
 
 <script setup>
-import {onMounted, ref, toRef} from 'vue'
-import {storeToRefs} from "pinia";
-import {useTasksStore} from '@/store/tasks'
+import {defineProps} from 'vue'
 
-const tasksStore = useTasksStore()
-const {tasks} = storeToRefs(tasksStore)
+const props = defineProps({
+  task: {
+    type: Object,
+    required: true,
+    default: () => {}
+  }
+})
 
 </script>
 
@@ -35,6 +35,7 @@ const {tasks} = storeToRefs(tasksStore)
 .task {
   border: 1px solid #cdcdcd;
   text-align: left;
+  cursor: pointer;
 
   .v-card-subtitle {
     color: blue;

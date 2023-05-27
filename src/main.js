@@ -16,5 +16,11 @@ import { registerPlugins } from '@/plugins'
 const app = createApp(App)
 
 registerPlugins(app)
+// app.use(PerfectScrollbar, {
+//   name:
+//   options: {
+//     suppressScrollX: true
+//   }
+// })
 
 app.mount('#app')

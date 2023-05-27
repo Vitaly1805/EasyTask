@@ -18,12 +18,10 @@
 </template>
 
 <script setup>
-
   import Header from '@/layouts/Header.vue'
   import Sidebar from '@/layouts/Sidebar.vue'
 
 </script>
-
 
 <style lang="scss" scope>
 
