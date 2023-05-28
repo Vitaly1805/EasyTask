@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
-    "unit": "jest"
+    "test": "jest"
   },
   "dependencies": {
     "@babel/preset-env": "^7.22.2",
@@ -28,8 +28,8 @@
     "babel-jest": "27",
     "eslint": "^8.37.0",
     "eslint-plugin-vue": "^9.3.0",
-    "jest": "^29.5.0",
-    "jest-environment-jsdom": "^29.5.0",
+    "jest": "27",
+    "jest-environment-jsdom": "27",
     "sass": "^1.60.0",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0",

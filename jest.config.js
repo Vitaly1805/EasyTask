@@ -1,10 +1,4 @@
 const config = {
-  "testEnvironmentOptions": {
-    "customExportConditions": [
-      "node",
-      "node-addons"
-    ]
-  },
   "testEnvironment": "jsdom",
   "moduleFileExtensions": [
     "js",

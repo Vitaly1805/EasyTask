@@ -1,15 +1,18 @@
 import { mount } from '@vue/test-utils'
 import Task from '@/components/Task'
 
-const task = {
-  title: 'Test',
-  project: 'ProjectTest'
-}
 
-test('setProps demo', async () => {
-  const wrapper = mount(Task)
+it('isset props into Task.vue', async () => {
+  const title = 'Задача 1'
+  const project = 'Проект 1'
+  const wrapper = await mount(Task, {
+    props: {
+      task: {
+        title,
+        project,
+      }
+    }
+  })
 
-  await wrapper.setProps(task)
-
-  expect(wrapper.vm.title).toBe('Test')
+  expect(wrapper.props().task.title).toBe(title)
 })
